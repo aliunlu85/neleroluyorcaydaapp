@@ -28,7 +28,7 @@ class _grafiksayfasiState extends State<grafiksayfasi> {
                       PieChartSectionData(
                         color: const Color(0xff2f8a13),
                         value: 17,
-                        title: '17%',
+                        title: '17% bükme',
                         radius: 17,
                         titleStyle: TextStyle(
                             fontSize: 10,
@@ -38,7 +38,7 @@ class _grafiksayfasiState extends State<grafiksayfasi> {
                       PieChartSectionData(
                         color: const Color(0xffffc712),
                         value: 40,
-                        title: '40%',
+                        title: '40% haşgeş',
                         radius: 40,
                         titleStyle: TextStyle(
                             fontSize: 12,
@@ -58,7 +58,7 @@ class _grafiksayfasiState extends State<grafiksayfasi> {
                       PieChartSectionData(
                         color: const Color(0xff0272a1),
                         value: 3,
-                        title: '3%',
+                        title: '3% doğa',
                         radius: 3,
                         titleStyle: TextStyle(
                             fontSize: 12,
