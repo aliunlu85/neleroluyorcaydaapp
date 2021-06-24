@@ -33,15 +33,21 @@ class sadecemerhaba extends StatefulWidget {
 
 class _sadecemerhabaState extends State<sadecemerhaba> {
 
- var refTest=FirebaseDatabase.instance.reference().child("test");
+  var refKisiler2 = FirebaseDatabase.instance.reference().child("kisiler_tablo");
 
-@override
+  Future<void> kisiEkle() async {
+    var bilgi = HashMap<String,dynamic>();
+    bilgi["kisi_ad"] = "Zeynep";
+    bilgi["kisi_yas"] = 12;
+    refKisiler2.push().set(bilgi);
+  }
+
+
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    var bilgi=HashMap<String, dynamic>();
-    bilgi["mesaj"]="merhaba";
-    refTest.push().set(bilgi);
+    kisiEkle();
   }
   @override
   Widget build(BuildContext context) {

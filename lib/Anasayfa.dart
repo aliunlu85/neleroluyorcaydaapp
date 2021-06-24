@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nocapp/DetaySayfa.dart';
+import 'package:nocapp/Fire1.dart';
 import 'package:nocapp/anamenuler.dart';
 import 'package:nocapp/animasyonsayfasi.dart';
 import 'package:nocapp/dosyaislemi.dart';
