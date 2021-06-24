@@ -15,17 +15,26 @@ class _imsakiyeState extends State<imsakiye> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("...2021 Çay İmsakiyesi..."),
+        title: Text("...Otobüs Saatleri..."),
       ),
       body: SingleChildScrollView(
 
         child:  Column(
           children: [
-            SizedBox(
+            GestureDetector(
+              onHorizontalDragCancel:(){
+      print("tıklandısss");
+      Navigator.push(
+      context,
+      MaterialPageRoute(
+      builder: (context) => Anasayfa(),
+      ));
+      },
+           child:  SizedBox(
               width: ekrangenisligi,
               height: ekranyuksekligi/1.5,
-              child: Image.asset("resimler/imsakiye2021.png"),
-            ),
+              child: Image.asset("resimler/otsaat.png"),
+            ),),
             Row(
               children: [
 
@@ -37,7 +46,7 @@ class _imsakiyeState extends State<imsakiye> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "2021 yılı Çay İlçesi Çay İmsakiyesi",
+                    "Güncel Otobüs Saatleri",
                     style: TextStyle(
                       color: Colors.green,
                       fontWeight: FontWeight.bold,
@@ -46,7 +55,7 @@ class _imsakiyeState extends State<imsakiye> {
                   ),
                   Row(
                     children: [
-                      kendiyaziwidget("8 Mayıs Cumartesi günü Kadir Gecesi' dir.\n \n13 Mayıs 2021 günü Ramazan Bayramının 1. günüdür.\n\n", ekrangenisligi/25),
+                      kendiyaziwidget("24 MAYIS 2021 DEN İTİBAREN", ekrangenisligi/25),
                     ],
                   ),
                   SizedBox(

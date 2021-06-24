@@ -21,9 +21,20 @@ class _tarihiState extends State<tarihi> {
       body: SingleChildScrollView(
         child:  Column(
           children: [
-            SizedBox(
+            GestureDetector(
+              onLongPress: (){
+                print("tıklandısss");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Anasayfa(),
+                    ));
+              },
+            child: SizedBox(
+
               width: ekrangenisligi,
               child: Image.asset("resimler/caytascami.jpg"),
+            ),
             ),
             Row(
               children: [

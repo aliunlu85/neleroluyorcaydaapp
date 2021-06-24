@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nocapp/Anasayfa.dart';
-import 'package:nocapp/tarihimekanlar1.dart';
-import 'package:nocapp/tarihimekanlar3.dart';
+import 'package:nocapp/nobeczane.dart';
 
-class tarihi2 extends StatefulWidget {
+class nobeczane2 extends StatefulWidget {
   @override
-  _tarihi2State createState() => _tarihi2State();
+  _nobeczane2State createState() => _nobeczane2State();
 }
 
-class _tarihi2State extends State<tarihi2> {
+class _nobeczane2State extends State<nobeczane2> {
   @override
   Widget build(BuildContext context) {
     var ekranbilgisi = MediaQuery.of(context);
@@ -17,25 +16,25 @@ class _tarihi2State extends State<tarihi2> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("...tarihimiz..."),
+        title: Text("...Nöbetçi Eczane..."),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child:  Column(
           children: [
             GestureDetector(
-              onDoubleTap: () {
-                print("tıklandısss");
+              onDoubleTapCancel: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Anasayfa(),
-                    ));
+                        builder: (context) => Anasayfa(
+
+                        )));
               },
               child: SizedBox(
                 width: ekrangenisligi,
-                child: Image.asset("resimler/caytashan.jpg"),
-              ),
-            ),
+                height: ekranyuksekligi/2,
+                child: Image.asset("resimler/nbec2.png"),
+              ),),
             Row(
               children: [
                 Expanded(
@@ -43,12 +42,12 @@ class _tarihi2State extends State<tarihi2> {
                     height: ekrangenisligi / 8,
                     child: FlatButton(
                       child: kendiyaziwidget(
-                          "< < < < < < < < < < < <", ekrangenisligi / 25),
+                          "< < < < < GEÇEN AY < < < <", ekrangenisligi / 25),
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => tarihi(),
+                              builder: (context) => nobeczane(),
                             ));
                       },
                       color: Colors.orange,
@@ -60,12 +59,12 @@ class _tarihi2State extends State<tarihi2> {
                     height: ekrangenisligi / 8,
                     child: FlatButton(
                       child: kendiyaziwidget(
-                          "> > > > > > > > > > >", ekrangenisligi / 25),
+                          "> > > > GELECEK AY > > >", ekrangenisligi / 25),
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => tarihi3(),
+                              builder: (context) =>Anasayfa(),
                             ));
                       },
                       color: Colors.deepOrangeAccent,
@@ -75,37 +74,38 @@ class _tarihi2State extends State<tarihi2> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(ekranyuksekligi / 100),
+              padding: EdgeInsets.all(ekranyuksekligi/100),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Taşhan",
+                    "NÖBETÇİ ECZANE",
                     style: TextStyle(
                       color: Colors.deepOrangeAccent,
                       fontWeight: FontWeight.bold,
-                      fontSize: ekrangenisligi / 20,
+                      fontSize: ekrangenisligi/20,
                     ),
                   ),
                   Row(
                     children: [
-                      kendiyaziwidget(
-                          "Çay Kervansarayı (Taşhan) - Afyonkarahisar",
-                          ekrangenisligi / 25),
+                      kendiyaziwidget("Çay İlçesi Nöbetçi Eczane Tablosu", ekrangenisligi/25),
                     ],
                   ),
                 ],
               ),
+
             ),
             Padding(
-              padding: EdgeInsets.all(ekranyuksekligi / 100),
-              child: kendiyaziwidget(
-                  "Selçuklu dönemi taş külliyesine ait bir yapıdır. Avlulu ve kapalı kervansaray tiplerindendir. Kare planlı, merkezde üzeri ışıklıklı dört fil ayağı ve çevresinde 12 ayak üzerinde tonoz örtülü, dıştan destek çıkıntılı kale görünümlü, taç kapılı kargir bir yapıdır. Ebul-Mücahhit Yusufhan tarafından III. Gıyaseddin Keyhüsrev zamanında, 1278 yılında Mimar Mehmet oğlu Oğul Bey’e yaptırılmıştır. Mimarın, simgesi olan pars arması, kapı üstüne işlenmiştir. Kare planı ile Anadolu Selçuklu Dönemi mimarisinin tek örneğidir. \n\nKaynak : Anadolu'nun Kilidi AFYON kitabından alıntı yapılmıştır.",
-                  ekrangenisligi / 25),
+              padding: EdgeInsets.all(ekranyuksekligi/100),
+              child: kendiyaziwidget(" NÖBETÇİ ECZANE TABLOSU EKTEDİR", ekrangenisligi/25),
+
             ),
+
+
           ],
         ),
       ),
+
     );
   }
 }

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nocapp/DetaySayfa.dart';
 import 'package:nocapp/anamenuler.dart';
+import 'package:nocapp/animasyonsayfasi.dart';
+import 'package:nocapp/dosyaislemi.dart';
+import 'package:nocapp/fireb.dart';
+import 'package:nocapp/grafiksayfasi.dart';
 import 'package:nocapp/hakkimizda.dart';
 import 'package:nocapp/iletisim.dart';
 import 'package:nocapp/main.dart';
@@ -34,7 +38,7 @@ class _AnasayfaState extends State<Anasayfa> {
 
   Future<List<Anamenuler>> anamenulerigetir() async {
     var anamenulistesi = List<Anamenuler>();
-    var m1 = Anamenuler(1, "İmsakiye", "imsakiye.png");
+    var m1 = Anamenuler(1, "Otobüs Saatleri", "otobussatleri.jpg");
     var m2 = Anamenuler(2, "Duyuru", "duyuru.png");
     var m3 = Anamenuler(3, "Nöbetçi Eczane", "nobec.png");
     var m4 = Anamenuler(4, "Korona Tablosu", "corona.png");
@@ -89,7 +93,7 @@ class _AnasayfaState extends State<Anasayfa> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => DetaySayfa(
-                                  menu: menu,
+                                  menu: menu,//detay sayfasına gönderdim
                                 )));
                   },
                   child: Card(
@@ -136,7 +140,6 @@ class _AnasayfaState extends State<Anasayfa> {
                     MaterialPageRoute(
                         builder: (context) => hakkimizda(),
                         ));
-                
               },
             ),
             ListTile(
@@ -148,9 +151,53 @@ class _AnasayfaState extends State<Anasayfa> {
                     MaterialPageRoute(
                       builder: (context) => iletisim(),
                     ));
-
               },
             ),
+            ListTile(
+              title: Text("Dosya İslemi", style: TextStyle(color: Colors.red, fontSize: 20),),
+              leading: Icon(Icons.message, color: Colors.deepPurple),
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => dosyaislemi(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: Text("Mesajınız Var", style: TextStyle(color: Colors.red, fontSize: 20),),
+              leading: Icon(Icons.email, color: Colors.deepPurple),
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => animasyonsayfasi(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: Text("İstatistik", style: TextStyle(color: Colors.red, fontSize: 20),),
+              leading: Icon(Icons.addchart, color: Colors.deepPurple),
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => grafiksayfasi(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: Text("Bize bir Mesaj At", style: TextStyle(color: Colors.red, fontSize: 20),),
+              leading: Icon(Icons.addchart, color: Colors.deepPurple),
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>sadecemerhaba(),
+                    ));
+              },
+            ),
+
           ],
         ),
       ),

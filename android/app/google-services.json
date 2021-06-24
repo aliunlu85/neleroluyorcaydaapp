@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "602474683301",
+    "firebase_url": "https://deneme2-2bdf4-default-rtdb.firebaseio.com",
+    "project_id": "deneme2-2bdf4",
+    "storage_bucket": "deneme2-2bdf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602474683301:android:a2a83aab0d801f6dc8e64c",
+        "android_client_info": {
+          "package_name": "com.example.nocapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602474683301-ihcbh1pr4u9uifr5pv566cnmkkuqp4rp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwPpCUFiUw1NvfFUQtvx0cX5hm0K7UTVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602474683301-ihcbh1pr4u9uifr5pv566cnmkkuqp4rp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

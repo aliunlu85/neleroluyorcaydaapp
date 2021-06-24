@@ -37,7 +37,7 @@ class _hakkimizdaState extends State<hakkimizda> {
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Text("Bu uygulama \nDr. Öğretim Üyesi Ahmet Cevahir ÇINAR \ntarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 203301104 numaralı ALİ ÜNLÜ tarafından 30.04.2021 günü yapılmıştır.", style: TextStyle(color: Colors.black, fontSize: 25),),
+              child: Text("Bu uygulama \nDr. Öğretim Üyesi Ahmet Cevahir ÇINAR \ntarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 203301104 numaralı ALİ ÜNLÜ tarafından 25.06.2021 günü yapılmıştır.", style: TextStyle(color: Colors.black, fontSize: 25),),
             ),
             Padding(
               padding: EdgeInsets.all(8.0),

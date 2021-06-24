@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nocapp/Anasayfa.dart';
-import 'package:nocapp/tarihimekanlar1.dart';
+import 'package:nocapp/tarihimekanlar2.dart';
 import 'package:nocapp/tarihimekanlar3.dart';
 
-class tarihi2 extends StatefulWidget {
+class tarihi4 extends StatefulWidget {
   @override
-  _tarihi2State createState() => _tarihi2State();
+  _tarihi4State createState() => _tarihi4State();
 }
 
-class _tarihi2State extends State<tarihi2> {
+class _tarihi4State extends State<tarihi4> {
   @override
   Widget build(BuildContext context) {
     var ekranbilgisi = MediaQuery.of(context);
@@ -24,7 +24,7 @@ class _tarihi2State extends State<tarihi2> {
           children: [
             GestureDetector(
               onDoubleTap: () {
-                print("tıklandısss");
+                print("tıklandı.");
                 Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -33,7 +33,7 @@ class _tarihi2State extends State<tarihi2> {
               },
               child: SizedBox(
                 width: ekrangenisligi,
-                child: Image.asset("resimler/caytashan.jpg"),
+                child: Image.asset("resimler/baraj.jpg"),
               ),
             ),
             Row(
@@ -48,7 +48,7 @@ class _tarihi2State extends State<tarihi2> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => tarihi(),
+                              builder: (context) => tarihi3(),
                             ));
                       },
                       color: Colors.orange,
@@ -65,7 +65,7 @@ class _tarihi2State extends State<tarihi2> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => tarihi3(),
+                              builder: (context) => Anasayfa(),
                             ));
                       },
                       color: Colors.deepOrangeAccent,
@@ -80,7 +80,7 @@ class _tarihi2State extends State<tarihi2> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Taşhan",
+                    "Çay Barajı",
                     style: TextStyle(
                       color: Colors.deepOrangeAccent,
                       fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class _tarihi2State extends State<tarihi2> {
                   Row(
                     children: [
                       kendiyaziwidget(
-                          "Çay Kervansarayı (Taşhan) - Afyonkarahisar",
+                          "Çay Barajı",
                           ekrangenisligi / 25),
                     ],
                   ),
@@ -100,7 +100,7 @@ class _tarihi2State extends State<tarihi2> {
             Padding(
               padding: EdgeInsets.all(ekranyuksekligi / 100),
               child: kendiyaziwidget(
-                  "Selçuklu dönemi taş külliyesine ait bir yapıdır. Avlulu ve kapalı kervansaray tiplerindendir. Kare planlı, merkezde üzeri ışıklıklı dört fil ayağı ve çevresinde 12 ayak üzerinde tonoz örtülü, dıştan destek çıkıntılı kale görünümlü, taç kapılı kargir bir yapıdır. Ebul-Mücahhit Yusufhan tarafından III. Gıyaseddin Keyhüsrev zamanında, 1278 yılında Mimar Mehmet oğlu Oğul Bey’e yaptırılmıştır. Mimarın, simgesi olan pars arması, kapı üstüne işlenmiştir. Kare planı ile Anadolu Selçuklu Dönemi mimarisinin tek örneğidir. \n\nKaynak : Anadolu'nun Kilidi AFYON kitabından alıntı yapılmıştır.",
+                  "105 metre yüksekliğiyle bölgenin en yüksek barajıdır. 29 milyon lira sulama faydası sağlanacak ve 7 bin 241 kişiye tarımsal istihdam imkanı yaratılacaktır.",
                   ekrangenisligi / 25),
             ),
           ],

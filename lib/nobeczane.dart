@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nocapp/Anasayfa.dart';
+import 'package:nocapp/nbeczane2.dart';
 
 class nobeczane extends StatefulWidget {
   @override
@@ -20,11 +21,20 @@ class _nobeczaneState extends State<nobeczane> {
       body: SingleChildScrollView(
         child:  Column(
           children: [
-            SizedBox(
+            GestureDetector(
+              onDoubleTapCancel: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Anasayfa(
+
+                        )));
+              },
+            child: SizedBox(
               width: ekrangenisligi,
-              height: ekranyuksekligi/5,
-              child: Image.asset("resimler/nobec.png"),
-            ),
+              height: ekranyuksekligi/2,
+              child: Image.asset("resimler/nbeczanehaziran.png"),
+            ),),
             Row(
               children: [
                 Expanded(
@@ -32,7 +42,7 @@ class _nobeczaneState extends State<nobeczane> {
                     height: ekrangenisligi / 8,
                     child: FlatButton(
                       child: kendiyaziwidget(
-                          "< < < < < D Ü N < < < <", ekrangenisligi / 25),
+                          "< < < < < GEÇEN AY < < < <", ekrangenisligi / 25),
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -49,12 +59,12 @@ class _nobeczaneState extends State<nobeczane> {
                     height: ekrangenisligi / 8,
                     child: FlatButton(
                       child: kendiyaziwidget(
-                          "> > > > YARIN > > > >", ekrangenisligi / 25),
+                          "> > > > GELECEK AY > > >", ekrangenisligi / 25),
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>Anasayfa(),
+                              builder: (context) =>nobeczane2(),
                             ));
                       },
                       color: Colors.deepOrangeAccent,
@@ -69,7 +79,7 @@ class _nobeczaneState extends State<nobeczane> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "FLUTTER ECZANESİ",
+                    "NÖBETÇİ ECZANE",
                     style: TextStyle(
                       color: Colors.deepOrangeAccent,
                       fontWeight: FontWeight.bold,
@@ -87,7 +97,7 @@ class _nobeczaneState extends State<nobeczane> {
             ),
             Padding(
               padding: EdgeInsets.all(ekranyuksekligi/100),
-              child: kendiyaziwidget("Nobetçi eczane sayfası yapmak istedim, fakat küçük bir ilçe olduğumuz için aylık bir tabloya bile ulaşamadım. Finalde ya bir yıllık tablo bulacam ya da görselden kaldıracağım. Bulabilirsem veritabanı ile yapmak güzel olur burayı. Gün gün çeker verileri. Sağlıklı günler.", ekrangenisligi/25),
+              child: kendiyaziwidget(" NÖBETÇİ ECZANE TABLOSU EKTEDİR", ekrangenisligi/25),
 
             ),
 
