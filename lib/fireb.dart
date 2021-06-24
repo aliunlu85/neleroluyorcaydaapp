@@ -58,7 +58,7 @@ class _sadecemerhabaState extends State<sadecemerhaba> {
     // TODO: implement initState
     super.initState();
     //kisiEkle();
-    //kisiSil();
+    kisiSil();
     //kisiGuncelle();
   }
   @override
