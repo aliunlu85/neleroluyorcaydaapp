@@ -188,8 +188,8 @@ class _AnasayfaState extends State<Anasayfa> {
               },
             ),
             ListTile(
-              title: Text("Bize bir Mesaj At", style: TextStyle(color: Colors.red, fontSize: 20),),
-              leading: Icon(Icons.addchart, color: Colors.deepPurple),
+              title: Text("FireBase", style: TextStyle(color: Colors.red, fontSize: 20),),
+              leading: Icon(Icons.all_inbox, color: Colors.deepPurple),
               onTap: (){
                 Navigator.push(
                     context,

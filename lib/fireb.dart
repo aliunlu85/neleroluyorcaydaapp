@@ -37,9 +37,19 @@ class _sadecemerhabaState extends State<sadecemerhaba> {
 
   Future<void> kisiEkle() async {
     var bilgi = HashMap<String,dynamic>();
-    bilgi["kisi_ad"] = "Zeynep";
+    bilgi["kisi_ad"] = "Ahmet Cevhair";
     bilgi["kisi_yas"] = 12;
     refKisiler2.push().set(bilgi);
+  }
+  Future<void> kisiSil() async {
+    refKisiler2.child("-McvYz77XELLHKlVyhIR").remove();
+  }
+
+  Future<void> kisiGuncelle() async {
+    var guncelbilgi = HashMap<String,dynamic>();
+    guncelbilgi["kisi_ad"] = "Yeni Zeynep";
+    guncelbilgi["kisi_yas"] = 90;
+    refKisiler2.child("-MNJxnDhaVhfjU2v0suR").update(guncelbilgi);
   }
 
 
@@ -47,13 +57,15 @@ class _sadecemerhabaState extends State<sadecemerhaba> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    kisiEkle();
+    //kisiEkle();
+    //kisiSil();
+    //kisiGuncelle();
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Merhaba'),
+        title: Text('Veriler FireBase içinde'),
       ),
       body: Center(
         child: Column(
